@@ -1,2 +1,8 @@
-json.extract! recipe, :id, :created_at, :updated_at
-json.url recipe_url(recipe, format: :json)
+json.id recipe.id
+json.name recipe.name
+json.image recipe.image
+json.description recipe.description
+json.ingredients recipe.ingredients
+json.time recipe.time
+json.user_id recipe.user_id
+json.servings recipe.servings
