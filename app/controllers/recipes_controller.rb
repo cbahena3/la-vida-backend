@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
     render :show
   end
   def destroy
-    @recipe = Recipe.find_by(id: params[:id])
+    @recipe = User.find_by(id: params[:id])
     @recipe.destroy
     render json:{message: "recipe deleted"}
   end
