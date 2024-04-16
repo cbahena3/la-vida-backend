@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
       name: params[:name],
       image: params[:image],
       description: params[:description],
+      instructions: params[:instructions],
       ingredients: params[:ingredients],
       time: params[:time],
       user_id: params[:user_id],

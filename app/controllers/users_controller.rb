@@ -1,13 +1,15 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user, except: [:index, :show, :create]
+  before_action :authenticate_user, except: [:index, :create]
+
   def index
     @users = User.all
     render :index
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = current_user
     render :show
+    # will only show who is logged in info
   end
 
   def create
